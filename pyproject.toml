@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "inbreeding_calculator"
+version = "1.0.0"
+description = "Calculate the inbreeding coefficient of a pedigree in Python."
+readme = "README.md"
+requires-python = ">=3.0"
+license = {text = "MIT"}
+authors = [
+  { name = "Owen Dechow", email = "owen.dechow@gmail.com" }
+]
+urls = { Homepage = "https://github.com/Owen-Dechow/inbreeding-python" }
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering :: Bio-Informatics"
+]
+dependencies = []
+
+[tool.setuptools]
+py-modules = ["inbreeding_calculator"]
