@@ -1,9 +1,9 @@
 from timeit import timeit
 from json import load as json_load
-from inbreeding import InbreedingCalculator
+from inbreeding_calculator import InbreedingCalculator
+from pathlib import Path
 
-pedigrees = json_load(open("test_data.json"))
-
+pedigrees = json_load(open(Path(__file__) / "../test_data.json"))
 
 def test_all():
     for pedigree in pedigrees:
@@ -12,5 +12,8 @@ def test_all():
         )
         calculator.get_coefficient()
 
-
-print(timeit(test_all, number=10000))
+if __name__ == "__main__":
+    ITERATIONS = 10_000
+    print(f"Speed Test:\t{ITERATIONS} iterations")
+    time = timeit(test_all, number=ITERATIONS)
+    print(f"Time:\t{time}s")

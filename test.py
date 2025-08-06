@@ -1,4 +1,4 @@
-from inbreeding import InbreedingCalculator
+from inbreeding_calculator import InbreedingCalculator
 from json import load as json_load
 from random import shuffle as random_shuffle
 from sys import argv

@@ -1,3 +1,9 @@
+"""
+inbreeding_calculator.py
+
+Calculate the inbreeding coefficient of a pedigree in Python.
+"""
+
 class InbreedingCalculator:
     def __init__(
         self,
