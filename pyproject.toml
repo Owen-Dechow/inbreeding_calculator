@@ -23,3 +23,6 @@ dependencies = []
 
 [tool.setuptools]
 py-modules = ["inbreeding_calculator"]
+
+[tool.setuptools.packages.find]
+where = ["."]
