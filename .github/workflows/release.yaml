@@ -27,16 +27,10 @@ jobs:
     - name: Install build tools
       run: |
         python -m pip install --upgrade pip
-        pip install setuptools wheel build
-        python3 -m pip install twine --upgrade
-
-    - name: Clean previous builds
-      run: rm -rf dist/ build/ *.egg-info
+        pip install setuptools wheel build twine
 
     - name: Build the package
       run: python -m build
 
-    - name: Publish to PyPI
-      uses: pypa/gh-action-pypi-publish@v1.8.10
-      with:
-        repository-url: https://upload.pypi.org/legacy/
+    - name: Publish to PyPI via Trusted Publisher
+      run: twine upload dist/*
