@@ -9,11 +9,9 @@ permissions:
   id-token: write  # Required for Trusted Publisher OIDC
   contents: read   # Required to read repo contents
 
-environment:
-  name: release  # GitHub environment name
-
 jobs:
   publish:
+    environment: release
     name: Publish to PyPI
     runs-on: ubuntu-latest
 
