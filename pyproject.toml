@@ -1,6 +1,6 @@
 [build-system]
-requires = ["setuptools>=61.0", "wheel"]
-build-backend = "setuptools.build_meta"
+requires = ["hatchling==1.26.3", "hatch-vcs"]
+build-backend = "hatchling.build"
 
 [project]
 name = "inbreeding_calculator"
